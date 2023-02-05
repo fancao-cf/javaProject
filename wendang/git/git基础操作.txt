@@ -1,0 +1,27 @@
+git常用命名总结（只针对命令框，不针对可视界面操作）
+
+解决fatal: unable to access 'https://github.com/fancao-cf/javaProject.git/': OpenSSL SSL_read: Connection was reset, errno 10054
+git config --global --unset http.proxy和git config --global --unset https.proxy
+
+
+
+1.git的基础原理
+
+
+工作区 --执行git add命令--【暂存区】--git commit -m "备注说明"--【本地库】 -（git pull拉取,get push提交）---【远程库】
+
+
+2.想要使用git管理一个文件夹下的内容，首先需要初始化文件为git仓库，git init 
+
+
+3.给远程仓库地址起别名 方便以后不用输入长的远端仓库名
+git remote add 别名 地址
+git remote -v 查看创建的别名
+
+4.git add 文件 将数据添加至暂存区
+  git checkout 文件 将文件从暂存区取回至工作区 
+
+5.git commit -m "提交说明"  ** ，**代表具体的文件 也可以为空，为空提交暂存区所有文件
+
+6.git push -u 
+
