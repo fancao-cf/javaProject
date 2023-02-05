@@ -23,5 +23,38 @@ git remote -v 查看创建的别名
 
 5.git commit -m "提交说明"  ** ，**代表具体的文件 也可以为空，为空提交暂存区所有文件
 
-6.git push -u 
+6.git push -u origin master 提交文件 并与远程仓库建立连接（第一次提交）
+git push origin master 后面提交
+git push -f origin "master" 强制使用本地代替远程仓库
+
+7.git status 查看git状态(这个命令可以查看当前有哪些文件在暂存区，有哪些文件需要提交，有没有冲突等)、
+
+8.git pull origin 远程分支名 从远程分支拉取代码并合并
+git fetch origin "zql" 拉取远程“zql”分支
+
+9.git log 查看commit日志 具体的参数自行百度搜索
+
+10.
+git reset --hard 版本号 切换版本并且清除暂存区与工作区
+11.git branch 查看分支 带*表示当前分支
+
+git checkout 分支名切换分支
+
+git checkout  -b 分支名称 -b 创建分支并且切换到分支
+
+git checkout -b 分支名 origin/已有分支名 根据已有分支创建分支
+
+git branch -d 分支名称
+
+
+12.git merge "sql"  在当前分支合并sql分支数据
+
+如果出现冲突，解决冲突之后 git add 文件，git commit -m "提交说明"，后面不能带文件名否则报错 
+
+13.删除本地分支
+git branch -d [branch name]
+
+删除远程分支（两种方法）
+git push origin :[branch name]
+git push --delete origin [branch name] 
 
